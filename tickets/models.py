@@ -25,3 +25,17 @@ class Ticket(models.Model):
     def is_closed(self):
         return self.status in settings.CLOSED_STATUSES
 
+class TicketComment(models.Model):
+    ticket = models.ForeignKey(Ticket, verbose_name=_("Ticket"), related_name='comments')
+    date = models.DateTimeField(auto_now_add=True, verbose_name=_("Date"), editable=False)
+    author = models.ForeignKey(User, verbose_name=_("Author"))
+    comment = models.TextField(_("Comment"))
+
+    class Meta:
+       verbose_name = _("Ticket comment")
+       verbose_name_plural = _("Ticket comments")
+       ordering = ['date']
+
+    def __unicode__(self):
+        return "Comment on " + unicode(self.ticket)
+
