@@ -12,7 +12,7 @@ setup(
     version=tickets.__version__,
     description='Reusable django application providing a generic support ticket system',
     long_description=read('README.md'),
-    license=read('LICENSE'),
+    license='MIT License',
     author='akuryou',
     author_email='contact@byteweaver.net',
     url='https://github.com/byteweaver/django-tickets',
