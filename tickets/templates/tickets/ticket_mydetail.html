@@ -1,0 +1,27 @@
+{% load i18n %}
+<table>
+    <tr>
+        <th>{% trans "Key" %}</th>
+        <th>{% trans "Value" %}</th>
+    </tr>
+    <tr>
+        <td>{% trans "ID" %}</td>
+        <td>{{ticket.id}}</td>
+    </tr>
+    <tr>
+        <td>{% trans "Subject" %}</td>
+        <td>{{ticket.subject}}</td>
+    </tr>
+    <tr>
+        <td>{% trans "Description" %}</td>
+        <td>{{ticket.description}}</td>
+    </tr>
+    <tr>
+        <td>{% trans "Assignee" %}</td>
+        <td>{{ticket.assignee}}</td>
+    </tr>
+    <tr>
+        <td>{% trans "Status" %}</td>
+        <td>{{ticket.status}}</td>
+    </tr>
+</table>
