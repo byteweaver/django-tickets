@@ -1,0 +1,15 @@
+{% load i18n %}
+<table>
+    <tr>
+        <th>{% trans "ID" %}</th>
+        <th>{% trans "Subject" %}</th>
+        <th>{% trans "Date" %}</th>
+    </tr>
+    {% for ticket in ticket_list %}
+    <tr>
+        <td>#{{ticket.id}}</td>
+        <td>{{ticket.subject}}</td>
+        <td>{{ticket.last_update}}</td>
+    </tr>
+    {% endfor %}
+</table>
