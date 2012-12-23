@@ -19,6 +19,9 @@ class Ticket(models.Model):
         verbose_name_plural = _("Tickets")
         ordering = ['date']
 
+    def get_comments_count(self):
+        return self.comments.count()
+
     def __unicode__(self):
         return "%s# %s" % (self.id, self.subject)
 
