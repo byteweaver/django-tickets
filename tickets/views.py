@@ -50,4 +50,5 @@ class TicketCreateView(CreateView):
         ticket.creator = self.request.user
         ticket.save()
         self.success_url = reverse('tickets:detail', args=[ticket.id])
+        messages.success(self.request, 'Ticket created.')
         return super(TicketCreateView, self).form_valid(form)
