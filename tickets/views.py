@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 
 from models import Ticket
 
@@ -16,3 +16,7 @@ class MyTicketDetailView(DetailView):
 
     def get_queryset(self):
         return Ticket.objects.filter(creator=self.request.user)
+
+class TicketCreateView(CreateView):
+    model = Ticket
+    template_name = 'tickets/ticket_create.html'
