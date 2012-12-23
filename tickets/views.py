@@ -1,6 +1,7 @@
 from django.views.generic import ListView, DetailView, CreateView
 from django.core.urlresolvers import reverse
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 
 from forms import TicketCreateForm, TicketCommentCreateForm
 from models import Ticket
@@ -27,6 +28,7 @@ class MyTicketDetailView(DetailView):
         self.form = TicketCommentCreateForm(request.POST)
         if self.form.is_valid():
             self.form_valid(self.form)
+            return HttpResponseRedirect(reverse('tickets:detail', args=[self.kwargs['pk']]))
         return super(MyTicketDetailView, self).get(request, *args, **kwargs)
 
     def form_valid(self, form):
