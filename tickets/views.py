@@ -2,6 +2,7 @@ from django.views.generic import ListView, DetailView, CreateView
 from django.core.urlresolvers import reverse
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.utils.translation import ugettext_lazy as _
 
 from forms import TicketCreateForm, TicketCommentCreateForm
 from models import Ticket
@@ -36,7 +37,7 @@ class MyTicketDetailView(DetailView):
         comment.author = self.request.user
         comment.ticket = Ticket.objects.get(id=self.kwargs['pk'])
         comment.save()
-        messages.success(self.request, 'Ticket comment created.')
+        messages.success(self.request, _("Ticket comment created."))
 
     def get_queryset(self):
         return Ticket.objects.filter(creator=self.request.user)
@@ -50,5 +51,5 @@ class TicketCreateView(CreateView):
         ticket.creator = self.request.user
         ticket.save()
         self.success_url = reverse('tickets:detail', args=[ticket.id])
-        messages.success(self.request, 'Ticket created.')
+        messages.success(self.request, _("Ticket created."))
         return super(TicketCreateView, self).form_valid(form)
