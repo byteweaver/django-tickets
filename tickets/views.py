@@ -36,7 +36,7 @@ class MyTicketDetailView(DetailView):
         comment.author = self.request.user
         comment.ticket = Ticket.objects.get(id=self.kwargs['pk'])
         comment.save()
-        messages.info(self.request, 'Ticket comment created.')
+        messages.success(self.request, 'Ticket comment created.')
 
     def get_queryset(self):
         return Ticket.objects.filter(creator=self.request.user)
