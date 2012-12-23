@@ -1,6 +1,16 @@
 from django.contrib import admin
 
-from models import Ticket
+from models import Ticket, TicketComment
 
 
-admin.site.register(Ticket)
+class TicketCommentInline(admin.StackedInline):
+    model = TicketComment
+    extra = 1
+
+
+class TicketAdmin(admin.ModelAdmin):
+    model = Ticket
+    inlines = [TicketCommentInline,]
+
+
+admin.site.register(Ticket, TicketAdmin)
