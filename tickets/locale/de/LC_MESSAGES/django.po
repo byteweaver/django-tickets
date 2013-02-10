@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-10 16:34+0100\n"
+"PO-Revision-Date: 2013-02-10 16:40+0100\n"
+"Last-Translator: noxan <noxan@byteweaver.net>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: tickets/models.py:9
+msgid "Creator"
+msgstr "Ersteller"
+
+#: tickets/models.py:10
+#: tickets/models.py:11
+#: tickets/models.py:33
+#: tickets/templates/tickets/ticket_mylist.html:6
+msgid "Date"
+msgstr "Datum"
+
+#: tickets/models.py:12
+#: tickets/templates/tickets/ticket_mydetail.html:12
+#: tickets/templates/tickets/ticket_mylist.html:5
+msgid "Subject"
+msgstr "Betreff"
+
+#: tickets/models.py:13
+#: tickets/templates/tickets/ticket_mydetail.html:16
+msgid "Description"
+msgstr "Beschreibung"
+
+#: tickets/models.py:13
+msgid "A detailed description of your problem."
+msgstr "Eine detailiertere Beschreibung des Problems."
+
+#: tickets/models.py:14
+#: tickets/templates/tickets/ticket_mydetail.html:20
+msgid "Assignee"
+msgstr "Bearbeiter"
+
+#: tickets/models.py:15
+#: tickets/templates/tickets/ticket_mydetail.html:24
+msgid "Status"
+msgstr "Status"
+
+#: tickets/models.py:18
+#: tickets/models.py:32
+msgid "Ticket"
+msgstr "Ticket"
+
+#: tickets/models.py:19
+msgid "Tickets"
+msgstr "Tickets"
+
+#: tickets/models.py:34
+msgid "Author"
+msgstr "Autor"
+
+#: tickets/models.py:35
+msgid "Comment"
+msgstr "Kommentar"
+
+#: tickets/models.py:38
+msgid "Ticket comment"
+msgstr "Ticketkommentar"
+
+#: tickets/models.py:39
+msgid "Ticket comments"
+msgstr "Ticketkommentare"
+
+#: tickets/settings.py:7
+msgid "New"
+msgstr "Neu"
+
+#: tickets/settings.py:8
+msgid "Feedback"
+msgstr "Rückmeldung"
+
+#: tickets/settings.py:9
+msgid "In Progress"
+msgstr "In Bearbeitung"
+
+#: tickets/settings.py:10
+msgid "Resolved"
+msgstr "Gelöst"
+
+#: tickets/settings.py:11
+msgid "Closed"
+msgstr "Geschlossen"
+
+#: tickets/views.py:40
+msgid "Ticket comment created."
+msgstr "Kommentar zu dem Ticket erstellt."
+
+#: tickets/views.py:54
+msgid "Ticket created."
+msgstr "Ticket erstellt."
+
+#: tickets/templates/tickets/ticket_mydetail.html:4
+msgid "Key"
+msgstr "Schlüssel"
+
+#: tickets/templates/tickets/ticket_mydetail.html:5
+msgid "Value"
+msgstr "Wert"
+
+#: tickets/templates/tickets/ticket_mydetail.html:8
+#: tickets/templates/tickets/ticket_mylist.html:4
+msgid "ID"
+msgstr "ID"
