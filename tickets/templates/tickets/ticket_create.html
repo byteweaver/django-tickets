@@ -1,10 +1,11 @@
+{% load i18n %}
 <form method="post" action="{% url tickets:create %}">
     <table>
         {% csrf_token %}
         {{form.as_table}}
         <tr>
             <td colspan="2">
-                <input type="submit" value="Create" />
+                <input type="submit" value="{% trans "Create" %}" />
             </td>
         </tr>
     </table>
