@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-10 17:08+0100\n"
-"PO-Revision-Date: 2013-02-10 16:40+0100\n"
+"PO-Revision-Date: 2013-02-10 17:11+0100\n"
 "Last-Translator: noxan <noxan@byteweaver.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -21,17 +21,21 @@ msgstr ""
 msgid "Creator"
 msgstr "Ersteller"
 
-#: models.py:10 models.py:11 models.py:33
+#: models.py:10
+#: models.py:11
+#: models.py:33
 #: templates/tickets/ticket_mylist.html:6
 msgid "Date"
 msgstr "Datum"
 
-#: models.py:12 templates/tickets/ticket_mydetail.html:12
+#: models.py:12
+#: templates/tickets/ticket_mydetail.html:12
 #: templates/tickets/ticket_mylist.html:5
 msgid "Subject"
 msgstr "Betreff"
 
-#: models.py:13 templates/tickets/ticket_mydetail.html:16
+#: models.py:13
+#: templates/tickets/ticket_mydetail.html:16
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -39,15 +43,18 @@ msgstr "Beschreibung"
 msgid "A detailed description of your problem."
 msgstr "Eine detailiertere Beschreibung des Problems."
 
-#: models.py:14 templates/tickets/ticket_mydetail.html:20
+#: models.py:14
+#: templates/tickets/ticket_mydetail.html:20
 msgid "Assignee"
 msgstr "Bearbeiter"
 
-#: models.py:15 templates/tickets/ticket_mydetail.html:24
+#: models.py:15
+#: templates/tickets/ticket_mydetail.html:24
 msgid "Status"
 msgstr "Status"
 
-#: models.py:18 models.py:32
+#: models.py:18
+#: models.py:32
 msgid "Ticket"
 msgstr "Ticket"
 
@@ -93,16 +100,15 @@ msgstr "Geschlossen"
 
 #: views.py:40
 msgid "Your comment has been successfully added to the ticket."
-msgstr ""
+msgstr "Ihr Kommentar wurde erfolgreich hinzugefügt."
 
 #: views.py:54
 msgid "Your ticket has been successfully created."
-msgstr ""
+msgstr "Ihr Ticket wurde erfolgreich erstellt."
 
 #: templates/tickets/ticket_create.html:8
-#, fuzzy
 msgid "Create"
-msgstr "Ersteller"
+msgstr "Erstellen"
 
 #: templates/tickets/ticket_mydetail.html:4
 msgid "Key"
