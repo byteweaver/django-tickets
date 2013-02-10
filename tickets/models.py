@@ -41,4 +41,3 @@ class TicketComment(models.Model):
 
     def __unicode__(self):
         return "Comment on " + unicode(self.ticket)
-
