@@ -36,9 +36,9 @@ class TicketComment(models.Model):
     comment = models.TextField(_("Comment"))
 
     class Meta:
-       verbose_name = _("Ticket comment")
-       verbose_name_plural = _("Ticket comments")
-       ordering = ['date']
+        verbose_name = _("Ticket comment")
+        verbose_name_plural = _("Ticket comments")
+        ordering = ['date']
 
     def __unicode__(self):
         return "Comment on " + unicode(self.ticket)
