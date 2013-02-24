@@ -17,6 +17,7 @@ setup(
     author_email='contact@byteweaver.net',
     url='https://github.com/byteweaver/django-tickets',
     packages=find_packages(),
+    include_package_data=True,
     install_requires=[
         'Django',
     ],
