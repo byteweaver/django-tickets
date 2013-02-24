@@ -10,7 +10,7 @@ class TicketCommentInline(admin.StackedInline):
 
 class TicketAdmin(admin.ModelAdmin):
     model = Ticket
-    inlines = [TicketCommentInline,]
+    inlines = [TicketCommentInline, ]
 
 
 admin.site.register(Ticket, TicketAdmin)
