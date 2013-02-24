@@ -38,7 +38,7 @@ class MyTicketDetailView(DetailView):
         comment.author = self.request.user
         comment.ticket = Ticket.objects.get(id=self.kwargs['pk'])
         comment.save()
-        messages.success(self.request, _("Your comment has been successfully added to the ticket."))
+        messages.success(self.request, _(u"Your comment has been successfully added to the ticket."))
 
     def get_queryset(self):
         return Ticket.objects.filter(creator=self.request.user)
@@ -53,5 +53,5 @@ class TicketCreateView(CreateView):
         ticket.creator = self.request.user
         ticket.save()
         self.success_url = reverse('tickets:detail', args=[ticket.id])
-        messages.success(self.request, _("Your ticket has been successfully created."))
+        messages.success(self.request, _(u"Your ticket has been successfully created."))
         return super(TicketCreateView, self).form_valid(form)
