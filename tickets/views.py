@@ -1,8 +1,8 @@
-from django.views.generic import ListView, DetailView, CreateView
-from django.core.urlresolvers import reverse
 from django.contrib import messages
+from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.utils.translation import ugettext_lazy as _
+from django.views.generic import ListView, DetailView, CreateView
 
 from forms import TicketCreateForm, TicketCommentCreateForm
 from models import Ticket
