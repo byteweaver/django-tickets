@@ -15,6 +15,7 @@ class MyTicketListView(ListView):
     def get_queryset(self):
         return Ticket.objects.filter(creator=self.request.user)
 
+
 class MyTicketDetailView(DetailView):
     model = Ticket
     template_name = 'tickets/ticket_mydetail.html'
@@ -41,6 +42,7 @@ class MyTicketDetailView(DetailView):
 
     def get_queryset(self):
         return Ticket.objects.filter(creator=self.request.user)
+
 
 class TicketCreateView(CreateView):
     form_class = TicketCreateForm
