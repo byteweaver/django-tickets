@@ -28,6 +28,7 @@ class Ticket(models.Model):
     def is_closed(self):
         return self.status in settings.CLOSED_STATUSES
 
+
 class TicketComment(models.Model):
     ticket = models.ForeignKey(Ticket, verbose_name=_("Ticket"), related_name='comments')
     date = models.DateTimeField(auto_now_add=True, verbose_name=_("Date"), editable=False)

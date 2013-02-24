@@ -8,6 +8,7 @@ class TicketCreateForm(forms.ModelForm):
         model = Ticket
         fields = ('subject', 'description')
 
+
 class TicketCommentCreateForm(forms.ModelForm):
     class Meta:
         model = TicketComment
