@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-10 17:08+0100\n"
-"PO-Revision-Date: 2013-02-10 17:11+0100\n"
+"POT-Creation-Date: 2013-02-24 20:25+0100\n"
+"PO-Revision-Date: 2013-02-24 20:25+0100\n"
 "Last-Translator: noxan <noxan@byteweaver.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -98,11 +98,11 @@ msgstr "Gelöst"
 msgid "Closed"
 msgstr "Geschlossen"
 
-#: views.py:40
+#: views.py:41
 msgid "Your comment has been successfully added to the ticket."
 msgstr "Ihr Kommentar wurde erfolgreich hinzugefügt."
 
-#: views.py:54
+#: views.py:56
 msgid "Your ticket has been successfully created."
 msgstr "Ihr Ticket wurde erfolgreich erstellt."
 
