@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.template.defaultfilters import date as _date, time as _time
+from django.utils.translation import ugettext_lazy as _
 
 from models import Ticket, TicketComment
 
@@ -22,5 +24,9 @@ class TicketAdmin(admin.ModelAdmin):
     raw_id_fields = ['creator', 'assignee']
     inlines = [TicketCommentInline, ]
 
+    def latest_activity(self, obj):
+        latest = obj.get_latest_comment()
+        return "%s %s - %s" % (_date(latest.date), _time(latest.date), latest.author)
+    latest_activity.short_description = _("Latest activity")
 
 admin.site.register(Ticket, TicketAdmin)
