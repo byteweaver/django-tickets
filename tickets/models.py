@@ -31,6 +31,15 @@ class Ticket(models.Model):
     def is_closed(self):
         return self.status in settings.CLOSED_STATUSES
 
+    def is_answered(self):
+        try:
+            latest = self.get_latest_comment()
+        except TicketComment.DoesNotExist:
+            return False
+        return latest.author != self.creator
+    is_answered.boolean = True
+    is_answered.short_description = _("Is answered")
+
 
 class TicketComment(models.Model):
     ticket = models.ForeignKey(Ticket, verbose_name=_("Ticket"), related_name='comments')
