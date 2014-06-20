@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from models import Ticket, TicketComment
 
 
-class TicketCommentInline(admin.StackedInline):
+class TicketCommentInline(admin.TabularInline):
     model = TicketComment
     extra = 1
     raw_id_fields = ['author']
