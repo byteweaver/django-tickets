@@ -22,6 +22,9 @@ class Ticket(models.Model):
     def get_comments_count(self):
         return self.comments.count()
 
+    def get_latest_comment(self):
+        return self.comments.latest('date')
+
     def __unicode__(self):
         return "%s# %s" % (self.id, self.subject)
 
