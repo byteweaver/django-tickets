@@ -8,6 +8,11 @@ class TicketCommentInline(admin.StackedInline):
     extra = 1
     raw_id_fields = ['author']
 
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'author':
+            kwargs['initial'] = request.user.id
+        return super(TicketCommentInline, self).formfield_for_foreignkey(db_field, request, **kwargs)
+
 
 class TicketAdmin(admin.ModelAdmin):
     model = Ticket
