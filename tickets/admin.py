@@ -15,6 +15,9 @@ class TicketCommentInline(admin.StackedInline):
 
 
 class TicketAdmin(admin.ModelAdmin):
+    list_display = ['date', 'status', 'subject', 'creator', 'assignee', 'latest_activity', 'is_answered']
+    list_filter = ['status', 'date']
+    search_fields = ['subject', 'description', 'creator__username', 'creator__email']
     model = Ticket
     raw_id_fields = ['creator', 'assignee']
     inlines = [TicketCommentInline, ]
