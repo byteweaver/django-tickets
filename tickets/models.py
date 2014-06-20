@@ -43,7 +43,7 @@ class Ticket(models.Model):
 
 class TicketComment(models.Model):
     ticket = models.ForeignKey(Ticket, verbose_name=_("Ticket"), related_name='comments')
-    date = models.DateTimeField(auto_now_add=True, verbose_name=_("Date"), editable=False)
+    date = models.DateTimeField(auto_now_add=True, verbose_name=_("Date"))
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_("Author"))
     comment = models.TextField(_("Comment"))
 

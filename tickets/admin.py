@@ -9,6 +9,7 @@ class TicketCommentInline(admin.StackedInline):
     model = TicketComment
     extra = 1
     raw_id_fields = ['author']
+    readonly_fields = ['date']
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == 'author':
