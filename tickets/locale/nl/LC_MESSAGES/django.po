@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-31 10:40+0100\n"
+"PO-Revision-Date: 2014-10-31 10:58+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: admin.py:30
+msgid "Latest activity"
+msgstr "Laatste activiteit"
+
+#: models.py:9
+msgid "Creator"
+msgstr "Schepper"
+
+#: models.py:10 models.py:11 models.py:46
+#: templates/tickets/ticket_mylist.html:6
+msgid "Date"
+msgstr "Datum"
+
+#: models.py:12 templates/tickets/ticket_mydetail.html:12
+#: templates/tickets/ticket_mylist.html:5
+msgid "Subject"
+msgstr "Onderwerp"
+
+#: models.py:13 templates/tickets/ticket_mydetail.html:16
+msgid "Description"
+msgstr "Beschrijving"
+
+#: models.py:13
+msgid "A detailed description of your problem."
+msgstr "Een gedetailleerde beschrijving van uw probleem."
+
+#: models.py:14 templates/tickets/ticket_mydetail.html:20
+msgid "Assignee"
+msgstr "Rechtverkrijgende"
+
+#: models.py:15 templates/tickets/ticket_mydetail.html:24
+msgid "Status"
+msgstr "Toestand"
+
+#: models.py:18 models.py:45
+msgid "Ticket"
+msgstr "Incident"
+
+#: models.py:19
+msgid "Tickets"
+msgstr "Incidenten"
+
+#: models.py:41
+msgid "Is answered"
+msgstr "Wordt beantwoord"
+
+#: models.py:47
+msgid "Author"
+msgstr "Auteur"
+
+#: models.py:48
+msgid "Comment"
+msgstr "Commentaar"
+
+#: models.py:51
+msgid "Ticket comment"
+msgstr "Incident commentaar"
+
+#: models.py:52
+msgid "Ticket comments"
+msgstr "Incident commentaren"
+
+#: settings.py:7
+msgid "New"
+msgstr "Nieuw"
+
+#: settings.py:8
+msgid "Feedback"
+msgstr "Terugkoppeling"
+
+#: settings.py:9
+msgid "In Progress"
+msgstr "Aan de gang"
+
+#: settings.py:10
+msgid "Resolved"
+msgstr "Opgelost"
+
+#: settings.py:11
+msgid "Closed"
+msgstr "Gesloten"
+
+#: views.py:41
+msgid "Your comment has been successfully added to the ticket."
+msgstr "Uw commentaar is succesvol toegevoegd aan het incident."
+
+#: views.py:56
+msgid "Your ticket has been successfully created."
+msgstr "Uw incident is succesvol aangemaakt."
+
+#: templates/tickets/ticket_create.html:8
+msgid "Create"
+msgstr "Creëren"
+
+#: templates/tickets/ticket_mydetail.html:4
+msgid "Key"
+msgstr "Key"
+
+#: templates/tickets/ticket_mydetail.html:5
+msgid "Value"
+msgstr "Waarde"
+
+#: templates/tickets/ticket_mydetail.html:8
+#: templates/tickets/ticket_mylist.html:4
+msgid "ID"
+msgstr "ID"
