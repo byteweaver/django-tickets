@@ -1,5 +1,5 @@
 {% load i18n %}
-<form method="post" action="{% url tickets:create %}">
+<form method="post" action="{% url 'tickets:create' %}">
     <table>
         {% csrf_token %}
         {{form.as_table}}
