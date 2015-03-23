@@ -1,6 +1,6 @@
-Django>=1.4.1
-django-nose
-coverage
-django-coverage
-factory_boy
+# app itself, required to make global django-admin.py work
+-e .
 
+Django>=1.6
+coverage
+factory_boy
