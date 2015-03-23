@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.template.defaultfilters import date as _date, time as _time
 from django.utils.translation import ugettext_lazy as _
 
-from models import Ticket, TicketComment
+from tickets.models import Ticket, TicketComment
 
 
 class TicketCommentInline(admin.TabularInline):
