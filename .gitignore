@@ -7,3 +7,5 @@ local_settings.py
 coverage/
 /.tox/
 *.egg-info/
+.coverage
+/htmlcov/
