@@ -4,8 +4,8 @@ from django.http import HttpResponseRedirect
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import ListView, DetailView, CreateView
 
-from forms import TicketCreateForm, TicketCommentCreateForm
-from models import Ticket
+from tickets.forms import TicketCreateForm, TicketCommentCreateForm
+from tickets.models import Ticket
 
 
 class MyTicketListView(ListView):

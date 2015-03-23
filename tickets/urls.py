@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, url
 from django.contrib.auth.decorators import login_required
 
-from views import MyTicketListView, MyTicketDetailView, TicketCreateView
+from tickets.views import MyTicketListView, MyTicketDetailView, TicketCreateView
 
 
 urlpatterns = patterns('',
