@@ -1,15 +1,24 @@
-VENV_FOLDER=env
-PIP_BIN=$(VENV_FOLDER)/bin/pip
-PYTHON_BIN=$(VENV_FOLDER)/bin/python
+VIRTUALENV_DIRECTORY?=env
+VIRTUALENV_BINARY?=virtualenv
+VIRTUALENV_PYTHON_BINARY?=python
 
-all: environment reqirements
+PYTHON_BINARY=$(VIRTUALENV_DIRECTORY)/bin/python
+PIP_BINARY=$(VIRTUALENV_DIRECTORY)/bin/pip
+DJANGO_ADMIN_BINARY=$(VIRTUALENV_DIRECTORY)/bin/django-admin
+COVERAGE_BINARY=$(VIRTUALENV_DIRECTORY)/bin/coverage
+
+all: environment requirements
 
 environment:
-	test -d "$(VENV_FOLDER)" || virtualenv --no-site-packages $(VENV_FOLDER)
+	test -d "$(VIRTUALENV_DIRECTORY)" || virtualenv --no-site-packages $(VIRTUALENV_DIRECTORY)
 
-reqirements:
-	$(PIP_BIN) install -r requirements.txt
+requirements:
+	$(PIP_BINARY) install -r requirements.txt
 
-test:
-	$(PYTHON_BIN) tickets/tests/runtests.py
+test: requirements
+	$(DJANGO_ADMIN_BINARY) test --settings=tickets.tests.settings
 
+coverage: requirements
+	$(COVERAGE_BINARY) erase
+	$(COVERAGE_BINARY) run --branch --source=tickets env/bin/django-admin.py test --settings=tickets.tests.settings
+	$(COVERAGE_BINARY) html

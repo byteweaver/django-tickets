@@ -1,6 +1,6 @@
 from django import forms
 
-from models import Ticket, TicketComment
+from tickets.models import Ticket, TicketComment
 
 
 class TicketCreateForm(forms.ModelForm):
