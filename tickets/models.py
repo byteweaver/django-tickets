@@ -6,12 +6,12 @@ from tickets.settings import STATUS_CHOICES, CLOSED_STATUSES
 
 
 class Ticket(models.Model):
-    creator = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_("Creator"), related_name='tickets')
+    creator = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_("Creator"), related_name='tickets', on_delete=models.CASCADE)
     date = models.DateTimeField(_("Date"), auto_now_add=True)
     last_update = models.DateTimeField(_("Date"), auto_now=True)
     subject = models.CharField(_("Subject"), max_length=255)
     description = models.TextField(_("Description"), help_text=_("A detailed description of your problem."))
-    assignee = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_("Assignee"), related_name="assigned_tickets", blank=True, null=True)
+    assignee = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_("Assignee"), related_name="assigned_tickets", blank=True, null=True, on_delete=models.SET_NULL)
     status = models.SmallIntegerField(_("Status"), choices=STATUS_CHOICES, default=0)
 
     class meta:
@@ -42,9 +42,9 @@ class Ticket(models.Model):
 
 
 class TicketComment(models.Model):
-    ticket = models.ForeignKey(Ticket, verbose_name=_("Ticket"), related_name='comments')
+    ticket = models.ForeignKey(Ticket, verbose_name=_("Ticket"), related_name='comments', on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True, verbose_name=_("Date"))
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_("Author"))
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_("Author"), on_delete=models.CASCADE)
     comment = models.TextField(_("Comment"))
 
     class Meta:
