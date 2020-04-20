@@ -9,3 +9,5 @@ urlpatterns = [
     path('my/<int:pk>/', login_required(MyTicketDetailView.as_view()), name='detail'),
     path('create/', login_required(TicketCreateView.as_view()), name='create'),
 ]
+
+app_name = 'tickets'
